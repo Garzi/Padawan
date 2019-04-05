@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Initium", "Initium\Initium.csproj", "{BAD25306-DCE5-4D8C-9102-7105C2D4166E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Initium", "Initium\Initium.csproj", "{BAD25306-DCE5-4D8C-9102-7105C2D4166E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Initium.Sample.Console", "Initium.Sample.Console\Initium.Sample.Console.csproj", "{7341C8C8-4FF9-4A07-9AED-F6E4A3B3904D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Initium.Sample.Web", "Initium.Sample.Web\Initium.Sample.Web.csproj", "{105048E7-5608-494C-A234-CFACA78F7B3D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{BAD25306-DCE5-4D8C-9102-7105C2D4166E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAD25306-DCE5-4D8C-9102-7105C2D4166E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAD25306-DCE5-4D8C-9102-7105C2D4166E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7341C8C8-4FF9-4A07-9AED-F6E4A3B3904D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7341C8C8-4FF9-4A07-9AED-F6E4A3B3904D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7341C8C8-4FF9-4A07-9AED-F6E4A3B3904D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7341C8C8-4FF9-4A07-9AED-F6E4A3B3904D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{105048E7-5608-494C-A234-CFACA78F7B3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{105048E7-5608-494C-A234-CFACA78F7B3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{105048E7-5608-494C-A234-CFACA78F7B3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{105048E7-5608-494C-A234-CFACA78F7B3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Initium
 {
+
     public class ServiceProvider : IServiceProvider
     {
         
@@ -13,9 +14,11 @@ namespace Initium
 
         public ServiceProvider(IServiceCollection serviceCollection)
         {
-
-            // Register initium classes & attributes
+            // Register initium service by attributes
             serviceCollection.RegisterAttributes();
+
+            // Register configuration by attributes
+            serviceCollection.RegisterConfigurationAttributes();
 
             // Build sercice provider
             _provider = serviceCollection.BuildServiceProvider();
