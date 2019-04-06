@@ -13,7 +13,7 @@ namespace Initium.DependencyResolver
        {
            var serviceCollection = new ServiceCollection();
 
-           ServiceProvider = serviceCollection.UseInitium();
+           ServiceProvider = serviceCollection.BuildServiceProvider();
        }
         
        public IServiceProvider ServiceProvider { get; set; }

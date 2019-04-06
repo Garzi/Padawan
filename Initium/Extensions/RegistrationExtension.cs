@@ -13,8 +13,7 @@ namespace Initium.Extensions
 {
    public static class RegistrationExtension
     {
-
-       
+        
         public static void RegisterAttributes(this IServiceCollection serviceCollection)
         {
 

@@ -12,9 +12,9 @@ namespace Initium.Sample.Web
 {
     public class Startup
     {
-        public IServiceProvider ConfigureServices(IServiceCollection services)
+        public void ConfigureServices(IServiceCollection services)
         {
-            return services.UseInitium();
+            
         }
         
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

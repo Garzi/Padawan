@@ -15,16 +15,19 @@ namespace Initium.Extensions
         {
 
             var startupName = typeof(TStartup).GetTypeInfo().Assembly.GetName().Name;
-
-            if (startupName != "Startup")
-                throw new ArgumentException("TStartup class must be registered as named as 'Startup'");
-
-
+            
             hostBuilder.UseSetting(WebHostDefaults.ApplicationKey, applicationName ?? startupName);
 
             hostBuilder.ConfigureServices(collection =>
             {
-                //collection.AddTransient<IStartupFilter, StartupFilter>();
+                // Register initium services by attributes
+                collection.RegisterAttributes();
+
+                // Register initium configurations by attributes
+                collection.RegisterConfigurationAttributes();
+
+                // Add configured application & Configurition of using of initium application 
+                collection.AddTransient<IStartupFilter, StartupFilter>();
             });
 
             hostBuilder.UseStartup(startupName);
