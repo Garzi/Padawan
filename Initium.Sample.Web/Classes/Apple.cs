@@ -8,6 +8,7 @@ namespace Initium.Sample.Console.Web
    [Singleton]
    public class Apple
     {
+       
         public string Value => "Apple";
     }
 }

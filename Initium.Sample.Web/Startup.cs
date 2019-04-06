@@ -3,6 +3,7 @@ using Initium.Abstractions;
 using Initium.Extensions;
 using Initium.Sample.Console.Web;
 using Initium.Sample.Web.Configuration;
+using Initium.Sample.Web.Jobs;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -21,6 +22,8 @@ namespace Initium.Sample.Web
         {
 
             var apple = app.ApplicationServices.GetService<Apple>();
+
+            var job = app.ApplicationServices.GetService<SchedulerJob>();
 
             var config = app.ApplicationServices.GetService<AppConfiguration>();
 

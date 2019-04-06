@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using Initium.Abstractions;
 using Initium.Attributes;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,7 +12,7 @@ using Scrutor;
 
 namespace Initium.Extensions
 {
-   public static class RegistrationExtension
+   internal static class RegistrationExtension
     {
         
         public static void RegisterAttributes(this IServiceCollection serviceCollection)
@@ -46,6 +47,20 @@ namespace Initium.Extensions
             );
 
         }
+
+        public static void RegisterSchedulerJobAttributes(this IServiceCollection serviceCollection)
+        {
+
+            serviceCollection.Scan(
+                selector =>
+                    selector.FromEntryAssembly().AddClasses(
+                            x => x.AssignableTo<ISchedulerJob>()
+                        )
+                        .AsSelfWithInterfaces()
+                        .WithSingletonLifetime()
+            );
+        }
+
 
         public static void RegisterConfigurationAttributes(this IServiceCollection serviceCollection)
         {

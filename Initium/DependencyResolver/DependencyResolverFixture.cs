@@ -12,10 +12,13 @@ namespace Initium.DependencyResolver
        public DependencyResolverFixture()
        {
            var serviceCollection = new ServiceCollection();
+            
+           serviceCollection.RegisterAttributes();
+           serviceCollection.RegisterConfigurationAttributes();
 
            ServiceProvider = serviceCollection.BuildServiceProvider();
        }
-        
+
        public IServiceProvider ServiceProvider { get; set; }
         
        public void Dispose()
