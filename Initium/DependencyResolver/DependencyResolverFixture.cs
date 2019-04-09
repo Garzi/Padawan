@@ -15,6 +15,7 @@ namespace Initium.DependencyResolver
             
            serviceCollection.RegisterAttributes();
            serviceCollection.RegisterConfigurationAttributes();
+           serviceCollection.RegisterSchedulerJobAttributes();
 
            ServiceProvider = serviceCollection.BuildServiceProvider();
        }

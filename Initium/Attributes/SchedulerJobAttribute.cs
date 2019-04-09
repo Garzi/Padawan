@@ -8,7 +8,7 @@ namespace Initium.Attributes
 {
 
     [AttributeUsage(AttributeTargets.Method)]
-    public sealed class RunNowAttribute : Attribute, IAttribute
+    public sealed class RunNowAttribute : Attribute, ISchedulerJobAttribute
     {
         /// <summary>
         /// Runs the job now.
@@ -20,7 +20,7 @@ namespace Initium.Attributes
     }
 
     [AttributeUsage(AttributeTargets.Method)]
-    public sealed class RunOnceInAttribute : Attribute, IAttribute
+    public sealed class RunOnceInAttribute : Attribute, ISchedulerJobAttribute
     {
 
 
@@ -43,7 +43,7 @@ namespace Initium.Attributes
 
 
     [AttributeUsage(AttributeTargets.Method)]
-    public sealed class RunOnceAtAttribute : Attribute, IAttribute
+    public sealed class RunOnceAtAttribute : Attribute, ISchedulerJobAttribute
     {
 
         /// <summary>
@@ -62,7 +62,7 @@ namespace Initium.Attributes
     }
 
     [AttributeUsage(AttributeTargets.Method)]
-    public sealed class RunEveryAttribute : Attribute, IAttribute
+    public sealed class RunEveryAttribute : Attribute, ISchedulerJobAttribute
     {
 
         /// <summary>
@@ -83,19 +83,17 @@ namespace Initium.Attributes
 
 
     [AttributeUsage(AttributeTargets.Method)]
-    public sealed class RunEveryAtAttribute : Attribute, IAttribute
+    public sealed class RunEveryDayAtAttribute : Attribute, ISchedulerJobAttribute
     {
         /// <summary>
-        /// Runs the job every according to the given interval and period at the given time.
+        /// Runs the job every day according to the given interval at the given time.
         /// </summary>
-        /// <param name="period"></param>
         /// <param name="hours">The hours (0 through 23).</param>
         /// <param name="minutes">The minutes (0 through 59).</param>
         /// <param name="interval">The interval</param>
-        public RunEveryAtAttribute(int interval, Period period, int hours, int minutes)
+        public RunEveryDayAtAttribute(int hours, int minutes, int interval)
         {
             Interval = interval;
-            Period = period;
             Hour = hours;
             Minute = minutes;
         }
@@ -105,19 +103,22 @@ namespace Initium.Attributes
 
         public int Interval { get; set; }
 
-        public Period Period { get; set; }
-        
+        public Period Period => Period.Day;
+
     }
 
 
     public enum Period
     {
 
+        Milliseconds,
         Second,
         Minute,
         Hour,
         Day,
-        Month
-   
+        Month,
+        Years,
+        Weekdays
+
     }
 }

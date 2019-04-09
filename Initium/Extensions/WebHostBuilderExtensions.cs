@@ -1,11 +1,8 @@
-﻿using Initium.Startup;
+﻿using FluentScheduler;
+using Initium.Startup;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
-using Initium.Abstractions;
-using System;
-using System.Threading.Tasks;
-using FluentScheduler;
 
 namespace Initium.Extensions
 {
@@ -54,9 +51,10 @@ namespace Initium.Extensions
 
             //  FLuent Scheduler Timing
             JobManager.UseUtcTime();
+
             
 
-   
+
             return hostBuilder;
 
         }
