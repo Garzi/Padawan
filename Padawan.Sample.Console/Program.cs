@@ -13,7 +13,7 @@ namespace Padawan.Sample.Console
         
         static void Main(string[] args)
         {
-            var resolver = new InitiumResolver();
+            var resolver = new PadawanResolver();
 
             var apple = resolver.ServiceProvider.GetService<Apple>();
 

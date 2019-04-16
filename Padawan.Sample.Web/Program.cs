@@ -18,7 +18,7 @@ namespace Padawan.Sample.Web
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseInitium<Startup>("Padawan.Sample.Web")
+                .UsePadawan<Startup>("Padawan.Sample.Web")
                 .Build();
     }
 }

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using FluentScheduler;
 using Padawan.Extensions;
 
 namespace Padawan.Startup
@@ -27,7 +28,7 @@ namespace Padawan.Startup
                 });
                 appLifetime.ApplicationStopped.Register(() =>
                 {
-
+                    JobManager.StopAndBlock();
                 });
 
                 next(builder);

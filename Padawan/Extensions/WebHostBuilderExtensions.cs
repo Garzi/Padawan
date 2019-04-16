@@ -11,7 +11,7 @@ namespace Padawan.Extensions
     public static class WebHostBuilderExtensions
     {
         
-        public static IWebHostBuilder UseInitium<TStartup>(this IWebHostBuilder hostBuilder, string applicationName = null) where TStartup : class
+        public static IWebHostBuilder UsePadawan<TStartup>(this IWebHostBuilder hostBuilder, string applicationName = null) where TStartup : class
         {
 
             var startupName = typeof(TStartup).GetTypeInfo().Assembly.GetName().Name;
@@ -20,17 +20,18 @@ namespace Padawan.Extensions
 
             hostBuilder.ConfigureServices(collection =>
             {
-                // Register initium services by attributes
+                // Register Padawan services by attributes
                 collection.RegisterAttributes();
 
-                // Register initium configurations by attributes
+                // Register Padawan configurations by attributes
                 collection.RegisterConfigurationAttributes();
 
-                // Register initium Scheduler job by attributes
+                // Register Padawan Scheduler job by attributes
                 collection.RegisterSchedulerJobAttributes();
 
-                // Add configured application & Configurition of using of initium application 
+                // Add configured application & Configurition of using of Padawan application 
                 collection.AddTransient<IStartupFilter, StartupFilter>();
+
             });
 
             hostBuilder.UseStartup(startupName);
@@ -76,12 +77,12 @@ namespace Padawan.Extensions
 
 
         /// <summary>
-        /// Configure Initium Json Option
+        /// Configure Padawan Json Option
         /// </summary>
         /// <param name="hostBuilder"></param>
         /// <param name="options">Newtonsoft Json Serializer Settings</param>
         /// <returns></returns>
-        public static IWebHostBuilder ConfigureInitiumJsonOption(this IWebHostBuilder hostBuilder, Action<JsonSerializerSettings> options)
+        public static IWebHostBuilder ConfigurePadawanJsonOption(this IWebHostBuilder hostBuilder, Action<JsonSerializerSettings> options)
         {
 
             options.Invoke(Padawan.JsonSerializerSettings);

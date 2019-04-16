@@ -6,12 +6,12 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Padawan.Resolver
 {
-   public class InitiumResolver : IDisposable
+   public class PadawanResolver : IDisposable
    {
        /// <summary>
        /// 
        /// </summary>
-       public InitiumResolver()
+       public PadawanResolver()
        {
            var serviceCollection = new ServiceCollection();
             
