@@ -5,8 +5,8 @@ using Padawan.Attributes;
 
 namespace Padawan.Sample.Console.Web
 {
-   [Transient]
-   public class Banana
+    [Transient]
+    public class Banana
     {
         public string Value => "Banana";
     }

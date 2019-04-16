@@ -5,10 +5,10 @@ using Padawan.Attributes;
 
 namespace Padawan.Sample.Console.Web
 {
-   [Singleton]
-   public class Apple
+    [Singleton]
+    public class Apple
     {
-       
+
         public string Value => "Apple";
     }
 }

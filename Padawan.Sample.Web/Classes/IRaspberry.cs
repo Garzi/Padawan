@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Padawan.Attributes;
 
-namespace Padawan.Sample.Console.Web
+namespace Padawan.Sample.Web.Classes
 {
 
     public interface IRaspberry

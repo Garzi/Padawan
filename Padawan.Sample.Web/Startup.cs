@@ -1,6 +1,4 @@
-﻿using System;
-using Padawan.Abstractions;
-using Padawan.Extensions;
+﻿
 using Padawan.Sample.Console.Web;
 using Padawan.Sample.Web.Configuration;
 using Padawan.Sample.Web.Jobs;

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Text;
 using Padawan.Attributes;
 
-namespace Padawan.Sample.Console.Web
+namespace Padawan.Sample.Web.Classes
 {
-   [Scoped]
-   public class Pear
+    [Scoped]
+    public class Pear
     {
         public string Value => "Pear";
     }
