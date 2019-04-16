@@ -1,15 +1,17 @@
 ﻿using System;
 using Initium.Extensions;
+using Initium.Startup;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Initium.DependencyResolver
+namespace Initium.Resolver
 {
-   public class DependencyResolverFixture : IDisposable
+   public class InitiumResolver : IDisposable
    {
        /// <summary>
        /// 
        /// </summary>
-       public DependencyResolverFixture()
+       public InitiumResolver()
        {
            var serviceCollection = new ServiceCollection();
             
@@ -18,7 +20,11 @@ namespace Initium.DependencyResolver
            serviceCollection.RegisterSchedulerJobAttributes();
 
            ServiceProvider = serviceCollection.BuildServiceProvider();
-       }
+
+
+           ServiceProvider.InitializeSchedulerJob();
+
+        }
 
        public IServiceProvider ServiceProvider { get; set; }
         

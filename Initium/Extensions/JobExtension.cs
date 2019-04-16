@@ -47,7 +47,7 @@ namespace Initium.Extensions
         public static Action<Schedule> GetScheduleByAttributes(this Attribute attribute, Action job)
         {
 
-            if (attribute is RunEveryAttribute runNow)
+            if (attribute is RunNowAttribute runNow)
                 JobManager.AddJob(job, schedule =>  schedule.ToRunNow());
 
             if (attribute is RunEveryAttribute runEvery)

@@ -20,7 +20,7 @@ namespace Initium.Sample.Web
         
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-
+            
             var apple = app.ApplicationServices.GetService<Apple>();
 
             var job = app.ApplicationServices.GetService<SchedulerJob>();

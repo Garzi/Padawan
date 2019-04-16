@@ -21,5 +21,7 @@ namespace Initium
             Converters = new List<JsonConverter> { new StringEnumConverter { NamingStrategy = new CamelCaseNamingStrategy()} }
         };
 
+
+
     }
 }
