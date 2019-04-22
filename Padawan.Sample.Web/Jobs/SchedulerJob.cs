@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Padawan.Abstractions;
 using Padawan.Attributes;
-using Padawan.Sample.Console.Web;
+using Padawan.Sample.Web.Classes;
 
 namespace Padawan.Sample.Web.Jobs
 {

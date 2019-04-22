@@ -32,7 +32,7 @@ namespace Padawan.Extensions
                     selector.FromEntryAssembly().AddClasses(
                             x => x.WithAttribute<ScopedAttribute>()
                         )
-                        .AsImplementedInterfaces()
+                        .AsSelfWithInterfaces()
                         .WithScopedLifetime()
             );
 
@@ -42,7 +42,7 @@ namespace Padawan.Extensions
                     selector.FromEntryAssembly().AddClasses(
                             x => x.WithAttribute<TransientAttribute>()
                         )
-                        .AsImplementedInterfaces()
+                        .AsSelfWithInterfaces()
                         .WithTransientLifetime()
             );
 

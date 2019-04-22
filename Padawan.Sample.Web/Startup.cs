@@ -1,11 +1,11 @@
 ﻿
-using Padawan.Sample.Console.Web;
 using Padawan.Sample.Web.Configuration;
 using Padawan.Sample.Web.Jobs;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Padawan.Sample.Web.Classes;
 
 namespace Padawan.Sample.Web
 {
@@ -20,6 +20,8 @@ namespace Padawan.Sample.Web
         {
             
             var apple = app.ApplicationServices.GetService<Apple>();
+
+            var banana = app.ApplicationServices.GetService<Banana>();
 
             var job = app.ApplicationServices.GetService<SchedulerJob>();
 
