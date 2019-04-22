@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>Padawan .NET Core Rapid Development Tool &amp; Library</Description>
+    <PackageProjectUrl>https://github.com/Garzi/Padawan</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Garzi/Padawan</RepositoryUrl>
+    <PackageLicenseUrl></PackageLicenseUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
