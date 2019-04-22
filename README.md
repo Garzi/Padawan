@@ -75,7 +75,7 @@ Scoped lifetime
 ```
 ## Configuration
 
-Bind configuration to class and option<T>
+Bind configuration to a class 
 ```csharp
     [Configuration("AppConfiguration")]
     public class AppConfiguration
