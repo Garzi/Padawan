@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Padawan.Abstractions;
+﻿using Padawan.Abstractions;
 using Padawan.Attributes;
 using Padawan.Sample.Web.Classes;
 
 namespace Padawan.Sample.Web.Jobs
 {
-   public class SchedulerJob : ISchedulerJob
+    public class SchedulerJob : ISchedulerJob
    {
 
        private readonly Apple _apple;

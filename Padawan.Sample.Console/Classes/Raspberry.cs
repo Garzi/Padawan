@@ -8,6 +8,11 @@ namespace Padawan.Sample.Console.Classes
    [Singleton]
    public class Raspberry : IRaspberry
     {
-        public string Value => "Raspberry";
+
+        public Raspberry()
+        {
+            Value = "Raspberry";
+        }
+        public string Value { get; set; } 
     }
 }

@@ -1,8 +1,7 @@
-﻿using Padawan.Extensions;
-using Microsoft.AspNetCore;
+﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
-using Newtonsoft.Json;
+using Padawan.Extensions;
 
 namespace Padawan.Sample.Web
 {

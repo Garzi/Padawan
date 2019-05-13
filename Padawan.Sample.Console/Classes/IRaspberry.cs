@@ -8,6 +8,7 @@ namespace Padawan.Sample.Console.Classes
 
     public interface IRaspberry
     {
-
+        string Value { get; set; }
     }
+
 }

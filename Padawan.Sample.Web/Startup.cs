@@ -18,14 +18,6 @@ namespace Padawan.Sample.Web
         
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            
-            var apple = app.ApplicationServices.GetService<Apple>();
-
-            var banana = app.ApplicationServices.GetService<Banana>();
-
-            var job = app.ApplicationServices.GetService<SchedulerJob>();
-
-            var config = app.ApplicationServices.GetService<AppConfiguration>();
 
             if (env.IsDevelopment())
             {

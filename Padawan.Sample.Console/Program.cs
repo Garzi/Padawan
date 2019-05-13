@@ -15,11 +15,10 @@ namespace Padawan.Sample.Console
         {
             var resolver = new PadawanResolver();
 
-            var apple = resolver.ServiceProvider.GetService<Apple>();
-
-            var job = resolver.ServiceProvider.GetService<SchedulerJob>();
-
-            var raspberry = resolver.ServiceProvider.GetService<IRaspberry>();
+            var app = resolver.ServiceProvider.GetService<App>();
+            
+            app.Run();
+           
 
             System.Console.ReadLine();
 
