@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>RabbitMq client for Padawan</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/Garzi/Padawan</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Garzi/Padawan</RepositoryUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/Garzi/Padawan/master/favicon.png</PackageIconUrl>
   </PropertyGroup>
 
   <ItemGroup>
