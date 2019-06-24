@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Padawan.Extensions;
+using Padawan.RabbitMq.Extensions;
 
 namespace Padawan.Sample.Web
 {
@@ -18,6 +19,8 @@ namespace Padawan.Sample.Web
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UsePadawan<Startup>("Padawan.Sample.Web")
+                .UseRabbitMq()
+                .UseUtcTime()
                 .Build();
     }
 }

@@ -17,7 +17,15 @@ namespace Padawan.Startup
                
                 // Get configuration
                 var configureation =  builder.ApplicationServices.GetService<IConfiguration>();
-                
+
+
+                // Invoke padawan actions
+                foreach (var action in Padawan.StartupAction)
+                {
+                    action.Invoke(builder);
+                }
+
+
                 // On application start
                 var appLifetime = builder.ApplicationServices.GetService<IApplicationLifetime>();
 
@@ -31,6 +39,7 @@ namespace Padawan.Startup
                     JobManager.StopAndBlock();
                 });
 
+                
                 next(builder);
             };
         }

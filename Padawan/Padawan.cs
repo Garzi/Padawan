@@ -1,16 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Serialization;
 
 namespace Padawan
 {
-    internal class Padawan
+    public static class Padawan
     {
+     
 
-        public static JsonSerializerSettings JsonSerializerSettings { get; set; } = new JsonSerializerSettings()
+        internal static JsonSerializerSettings JsonSerializerSettings { get; set; } = new JsonSerializerSettings()
         {
             ContractResolver = new CamelCasePropertyNamesContractResolver(),
             Formatting = Formatting.Indented,
@@ -21,7 +24,7 @@ namespace Padawan
             Converters = new List<JsonConverter> { new StringEnumConverter { NamingStrategy = new CamelCaseNamingStrategy()} }
         };
 
-
+        public static List<Action<IApplicationBuilder>> StartupAction = new List<Action<IApplicationBuilder>>();
 
     }
 }

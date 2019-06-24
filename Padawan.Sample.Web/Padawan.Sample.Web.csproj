@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Padawan.RabbitMq\Padawan.RabbitMq.csproj" />
     <ProjectReference Include="..\Padawan\Padawan.csproj" />
   </ItemGroup>
 
