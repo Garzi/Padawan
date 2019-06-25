@@ -128,3 +128,4 @@ The job configuration is handled in Scheduler Job Attribute classes. A job is a 
 - https://github.com/fluentscheduler/FluentScheduler
 - https://github.com/khellang/Scrutor
 - https://github.com/JamesNK/Newtonsoft.Json
+- https://github.com/ocinbat/Sillycore   (Thanks for the support @ocinbat)
