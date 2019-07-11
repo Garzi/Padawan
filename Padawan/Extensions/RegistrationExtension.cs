@@ -20,7 +20,7 @@ namespace Padawan.Extensions
 
             serviceCollection.Scan(
                 selector =>
-                    selector.FromEntryAssembly().AddClasses(
+                    selector.FromApplicationDependencies().AddClasses(
                             x => x.WithAttribute<SingletonAttribute>()
                         )
                         .AsSelfWithInterfaces()
@@ -29,7 +29,7 @@ namespace Padawan.Extensions
 
             serviceCollection.Scan(
                 selector =>
-                    selector.FromEntryAssembly().AddClasses(
+                    selector.FromApplicationDependencies().AddClasses(
                             x => x.WithAttribute<ScopedAttribute>()
                         )
                         .AsSelfWithInterfaces()
@@ -37,9 +37,10 @@ namespace Padawan.Extensions
             );
 
 
+
             serviceCollection.Scan(
                 selector =>
-                    selector.FromEntryAssembly().AddClasses(
+                    selector.FromApplicationDependencies().AddClasses(
                             x => x.WithAttribute<TransientAttribute>()
                         )
                         .AsSelfWithInterfaces()
@@ -53,7 +54,7 @@ namespace Padawan.Extensions
 
             serviceCollection.Scan(
                 selector =>
-                    selector.FromEntryAssembly().AddClasses(
+                    selector.FromApplicationDependencies().AddClasses(
                             x => x.AssignableTo<ISchedulerJob>()
                         )
                         .AsSelfWithInterfaces()
@@ -67,7 +68,7 @@ namespace Padawan.Extensions
 
             var configurationTypes = serviceCollection.Scan(
                 selector =>
-                    selector.FromEntryAssembly().AddClasses(
+                    selector.FromApplicationDependencies().AddClasses(
                         x => x.WithAttribute<ConfigurationAttribute>()
                     )
             ).Select(s => s.ServiceType).ToList();

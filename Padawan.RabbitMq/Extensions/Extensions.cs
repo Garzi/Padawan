@@ -43,7 +43,7 @@ namespace Padawan.RabbitMq.Extensions
 
             var consumerTypes = serviceCollection.Scan(
                 selector =>
-                    selector.FromEntryAssembly().AddClasses(
+                    selector.FromApplicationDependencies().AddClasses(
                         x => x.WithAttribute<ConsumerAttribute>()
                     )
             ).Select(s => s.ServiceType).ToList();
