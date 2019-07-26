@@ -8,6 +8,19 @@
 Padawan  .NET Core Rapid Development Tool &amp; Library
 
 
+## Installation
+
+```shell
+PM> Install-Package Padawan
+```
+
+or
+
+```shell
+> dotnet add package Padawan
+```
+
+
 # Usage
 
 Modify the Program.cs to apply the Padawan
