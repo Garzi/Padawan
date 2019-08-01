@@ -1,3 +1,10 @@
+<p align="center">
+    <a href="#Padawan">
+        <img alt="logo" src="now-the-force-with-you.png">
+    </a>
+</p>
+
+
 # Padawan RabbitMq
 RabbitMq client for Padawan. Attribute using and registration of consumer
 
