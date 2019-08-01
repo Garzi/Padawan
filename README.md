@@ -26,6 +26,9 @@ or
 - [Padawan.RabbitMq ](https://github.com/Garzi/Padawan/blob/master/README-RabbitMq.md)
 
 
+
+## Padawan Core
+
 # Usage
 
 Modify the Program.cs to apply the Padawan
