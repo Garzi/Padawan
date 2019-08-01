@@ -23,7 +23,7 @@ or
 
 ## Other & Libraries
 
-- [Padawan.RabbitMq ](/Garzi/Padawan/blob/master/README-RabbitMq.md)
+- [Padawan.RabbitMq ](https://github.com/Garzi/Padawan/blob/master/README-RabbitMq.md)
 
 
 # Usage
