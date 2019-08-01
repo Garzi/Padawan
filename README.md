@@ -13,10 +13,12 @@ Padawan  .NET Core Rapid Development Tool &amp; Library
 - [Padawan.RabbitMq ](https://github.com/Garzi/Padawan/blob/master/README-RabbitMq.md)
 
 
-***
+
+
+
+
 
 # Padawan Core
-
 
 ## Installation
 
