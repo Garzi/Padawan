@@ -8,6 +8,16 @@
 Padawan  .NET Core Rapid Development Tool &amp; Library
 
 
+## Padawan Libraries
+
+- [Padawan.RabbitMq ](https://github.com/Garzi/Padawan/blob/master/README-RabbitMq.md)
+
+
+***
+
+# Padawan Core
+
+
 ## Installation
 
 ```shell
@@ -20,14 +30,6 @@ or
 > dotnet add package Padawan
 ```
 
-
-## Padawan Libraries
-
-- [Padawan.RabbitMq ](https://github.com/Garzi/Padawan/blob/master/README-RabbitMq.md)
-
-
-
-## Padawan Core
 
 # Usage
 
