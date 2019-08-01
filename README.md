@@ -21,7 +21,7 @@ or
 ```
 
 
-## Other & Libraries
+## Padawan Libraries
 
 - [Padawan.RabbitMq ](https://github.com/Garzi/Padawan/blob/master/README-RabbitMq.md)
 
