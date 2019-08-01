@@ -21,6 +21,11 @@ or
 ```
 
 
+## Other & Libraries
+
+- [Padawan.RabbitMq ](/Garzi/Padawan/blob/master/README-RabbitMq.md)
+
+
 # Usage
 
 Modify the Program.cs to apply the Padawan
