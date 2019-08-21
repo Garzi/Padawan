@@ -45,7 +45,71 @@ Modify the Program.cs to apply the Padawan
 
 Multiple RabbitMq using
 
-> .UseRabbitMq("Rabbit1"),   .UseRabbitMq("Rabbit2")
+
+```csharp
+    public class Program
+    {
+
+        public static IConfiguration Configuration { get; set; }
+
+        public static void Main(string[] args)
+        {
+            BuildWebHost(args).Run();
+        }
+
+        public static IWebHost BuildWebHost(string[] args) =>
+            WebHost.CreateDefaultBuilder(args)
+                .UsePadawan<Startup>("Padawan.Sample.Web")
+                 .UseRabbitMq("Rabbit1")
+                 .UseRabbitMq("Rabbit2")
+                .Build();
+    }
+```
+
+
+Consumer Usage
+
+```csharp
+    [Consumer(QueueName = "QueueName", PrefetchCount = 2, ExchangeName = "ExchangeName")]
+    public class SaveStockWhenEventReceived : IConsumer<StockEvent>
+    {
+
+
+        public async Task Consume(ConsumeContext<StockEvent> context)
+        {
+         
+
+        }
+    }
+```
+
+
+Consumer Usage
+
+```csharp
+    [Scoped]
+    public class StockService
+    {
+
+        private readonly IBusProvider _busProvider;
+
+        public StockService(IBusProvider busProvider)
+        {
+
+            _busProvider = busProvider;
+        }
+
+
+        public async Task Send()
+        {
+
+            await _busProvider.GetInstance()
+                .Send<StockEvent>(new StockEvent() { }, "QueueName");
+
+        }
+
+    }
+```
 
 # Appsettings
 
