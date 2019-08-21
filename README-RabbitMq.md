@@ -43,7 +43,7 @@ Modify the Program.cs to apply the Padawan
     }
 ```
 
-Multiple RabbitMq using
+Multiple RabbitMq Usage
 
 
 ```csharp
