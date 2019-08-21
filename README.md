@@ -8,7 +8,7 @@
 Padawan  .NET Core Rapid Development Tool &amp; Library
 
 
-## Padawan Libraries
+## Padawan Libraries, Documentation
 
 - [Padawan.Core ](https://github.com/Garzi/Padawan/blob/master/README-Core.md)
 - [Padawan.RabbitMq ](https://github.com/Garzi/Padawan/blob/master/README-RabbitMq.md)
